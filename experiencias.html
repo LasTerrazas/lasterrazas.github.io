@@ -453,58 +453,69 @@
             }
         });
 
-        // Filter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const experienceCards = document.querySelectorAll('.experience-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-green-600', 'text-white'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active', 'bg-green-600', 'text-white');
-                    
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Filter cards
-                    experienceCards.forEach(card => {
-                        if (filterValue === 'all') {
-                            card.classList.remove('hidden-experience');
-                        } else {
-                            if (card.getAttribute('data-category') === filterValue) {
-                                card.classList.remove('hidden-experience');
-                            } else {
-                                card.classList.add('hidden-experience');
-                            }
-                        }
-                    });
-                });
-            });
-        });
+        // Aplicar filtro según URL o botón
+  function applyFilter(categoria) {
+    // Actualizar botones activos
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('bg-green-600', 'text-white');
+      btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+    });
 
-        // Función para aplicar filtro por parámetro de URL
-        function applyFilterFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const categoria = urlParams.get('categoria');
-        
-            if (categoria) {
-                // Simular clic en el botón correspondiente
-                const filterButton = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
-                if (filterButton) {
-                    filterButton.click();
-                }
-            }
+    const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
+    if (activeBtn) {
+      activeBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+      activeBtn.classList.add('bg-green-600', 'text-white');
+    }
+
+    // Filtrar tarjetas
+    const cards = document.querySelectorAll('.experience-card');
+    cards.forEach(card => {
+      if (categoria === 'all') {
+        card.style.display = 'block';
+      } else {
+        if (card.classList.contains(`categoria-${categoria}`)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
         }
-        
-        // Ejecutar al cargar la página
-        document.addEventListener('DOMContentLoaded', function() {
-            // ... (tu código existente: AOS, feather, menú móvil, etc.)
-        
-            // Aplicar filtro desde URL
-            applyFilterFromURL();
-        });
+      }
+    });
+  }
+
+  // Manejar clic en botones
+  document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const categoria = button.getAttribute('data-filter');
+      // Actualizar la URL sin recargar la página
+      const newUrl = new URL(window.location);
+      if (categoria === 'all') {
+        newUrl.searchParams.delete('categoria');
+      } else {
+        newUrl.searchParams.set('categoria', categoria);
+      }
+      window.history.pushState({ categoria }, '', newUrl);
+      applyFilter(categoria);
+    });
+  });
+
+  // Aplicar filtro al cargar la página
+  function initFilterFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoria = urlParams.get('categoria') || 'all';
+    applyFilter(categoria);
+  }
+
+  // Escuchar cambios en el historial (botones Atrás/Adelante)
+  window.addEventListener('popstate', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoria = urlParams.get('categoria') || 'all';
+    applyFilter(categoria);
+  });
+
+  // Iniciar
+  document.addEventListener('DOMContentLoaded', () => {
+    initFilterFromURL();
+  });
     </script>
 </body>
 </html>

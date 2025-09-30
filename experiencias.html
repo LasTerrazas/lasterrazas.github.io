@@ -335,6 +335,16 @@
             feather.replace();
         });
 
+        // Toggle more content functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('toggle-more')) {
+                e.preventDefault();
+                const moreContent = e.target.closest('.experience-card').querySelector('.more-content');
+                moreContent.classList.toggle('hidden');
+                e.target.textContent = moreContent.classList.contains('hidden') ? 'Saber más →' : 'Mostrar menos ←';
+            }
+        });
+
         // Filter functionality
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-btn');

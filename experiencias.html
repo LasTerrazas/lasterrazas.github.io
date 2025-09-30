@@ -464,6 +464,28 @@
                 });
             });
         });
+
+        // Función para aplicar filtro por parámetro de URL
+        function applyFilterFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoria = urlParams.get('categoria');
+        
+            if (categoria) {
+                // Simular clic en el botón correspondiente
+                const filterButton = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
+                if (filterButton) {
+                    filterButton.click();
+                }
+            }
+        }
+        
+        // Ejecutar al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... (tu código existente: AOS, feather, menú móvil, etc.)
+        
+            // Aplicar filtro desde URL
+            applyFilterFromURL();
+        });
     </script>
 </body>
 </html>

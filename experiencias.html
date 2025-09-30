@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las Terrazas</title>
+    <title>Experiencias en Las Terrazas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <style>
         .experience-card:hover {
             transform: translateY(-10px);
             transition: all 0.3s ease;
+        }
+        
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background-color: #059669;
+            color: white;
+        }
+        
+        .experience-card {
+            display: block;
+        }
+        
+        .hidden-experience {
+            display: none;
         }
     </style>
 </head>
@@ -25,7 +40,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="#" class="flex-shrink-0 flex items-center">
-                        <img src="images/terrazas-logo.png" alt="Las Terrazas Logo">
+                        <img src="images/terrazas-logo.png" alt="Las Terrazas Logo" class="h-10">
                     </a>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
@@ -53,11 +68,11 @@
                     <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-600 hover:bg-green-700">Contacto</a>
                 </div>
             </div>
-            </div>
         </div>
     </nav>
-     <!-- Experiences Full Page Section -->
-    <section class="pt-20 pb-20 bg-gray-50">
+
+    <!-- Experiences Full Page Section -->
+    <section class="pt-20 pb-20 bg-gray-50" id="experiencias">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center" data-aos="fade-up">
                 <h2 class="text-base text-green-600 font-semibold tracking-wide uppercase">Experiencias</h2>
@@ -69,10 +84,31 @@
                 </p>
             </div>
 
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- Aquí pega TODAS tus tarjetas de experiencia -->
-                <!-- Experience 1 -->
-                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+            <!-- Filter Buttons -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4" data-aos="fade-up">
+                <button class="filter-btn active px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50" data-filter="all">
+                    Todas
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50" data-filter="senderismo">
+                    Senderismo
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50" data-filter="gastronomia">
+                    Gastronomía
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50" data-filter="alojamiento">
+                    Alojamiento
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50" data-filter="aventura">
+                    Aventura
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50" data-filter="cultura">
+                    Cultura
+                </button>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" id="experiences-container">
+                <!-- Experience 1 - Senderismo -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-category="senderismo">
                     <img class="w-full h-48 object-cover" src="images/Senderismo.jpeg" alt="Senderismo">
                     <div class="p-6">
                         <div class="flex items-center">
@@ -81,7 +117,7 @@
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Senderismo Guiado</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Los valores culturales, históricos y paisajísticos de la zona más occidental de cuba le despertará un gran interés. Contamos con variedad de excursiones.
+                            Los valores culturales, históricos y paisajísticos de la zona más occidental de Cuba le despertará un gran interés. Contamos con variedad de excursiones.
                         </p>
                         <div class="mt-4">
                             <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
@@ -89,19 +125,99 @@
                     </div>
                 </div>
 
-                <!-- Experience 2 -->
-                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <!-- Experience 2 - Gastronomía -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-category="gastronomia">
                     <img class="w-full h-48 object-cover" src="images/Experiencia-Restaurante1.jpg" alt="Restaurantes">
                     <div class="p-6">
-                        <!-- ... contenido ... -->
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
+                            <span class="ml-2 text-gray-500 text-sm">2-3 horas</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Gastronomía Local</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Disfruta de la auténtica cocina cubana en nuestros restaurantes, con ingredientes frescos y recetas tradicionales transmitidas por generaciones.
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Agrega aquí el resto de tus experiencias... -->
+                <!-- Experience 3 - Alojamiento -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-category="alojamiento">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Alojamiento">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Alojamiento</span>
+                            <span class="ml-2 text-gray-500 text-sm">Noches</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Hotel La Moka</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Hospédate en nuestro emblemático hotel integrado en la naturaleza, con todas las comodidades y vistas espectaculares de la Sierra del Rosario.
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Experience 4 - Aventura -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-category="aventura">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Canopy">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Aventura</span>
+                            <span class="ml-2 text-gray-500 text-sm">2 horas</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Canopy Tour</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Deslízate por los árboles en nuestro emocionante circuito de canopy, con plataformas y tirolinas que te permitirán admirar el paisaje desde las alturas.
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 5 - Cultura -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-category="cultura">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Cultura">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Cultura</span>
+                            <span class="ml-2 text-gray-500 text-sm">3 horas</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Talleres Artesanales</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Conoce a los artistas locales y participa en talleres de cerámica, pintura y artesanías tradicionales. Una experiencia auténtica de la cultura cubana.
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 6 - Senderismo -->
+                <div class="experience-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-category="senderismo">
+                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Baños San Juan">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
+                            <span class="ml-2 text-gray-500 text-sm">4 horas</span>
+                        </div>
+                        <h3 class="mt-2 text-xl font-semibold text-gray-900">Baños San Juan</h3>
+                        <p class="mt-3 text-base text-gray-500">
+                            Disfruta de un refrescante baño en las aguas cristalinas del río San Juan, rodeado de exuberante vegetación y paisajes impresionantes.
+                        </p>
+                        <div class="mt-4">
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="bg-gray-800">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -191,65 +307,38 @@
                 icon.setAttribute('data-feather', 'x');
             }
             feather.replace();
-        }); 
+        });
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const experienceCards = document.querySelectorAll('.experience-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-green-600', 'text-white'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-green-600', 'text-white');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter cards
+                    experienceCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.classList.remove('hidden-experience');
+                        } else {
+                            if (card.getAttribute('data-category') === filterValue) {
+                                card.classList.remove('hidden-experience');
+                            } else {
+                                card.classList.add('hidden-experience');
+                            }
+                        }
+                    });
+                });
+            });
+        });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

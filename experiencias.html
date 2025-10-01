@@ -484,72 +484,55 @@
             }
         });
 
-        // Aplicar filtro según URL o botón
+        // === FILTRADO DINÁMICO ===
         function applyFilter(categoria) {
             // Actualizar botones activos
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('bg-green-600', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-            });
-
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-                activeBtn.classList.add('bg-green-600', 'text-white');
-            }
+            if (activeBtn) activeBtn.classList.add('active');
 
-            // === FILTRADO AVANZADO ===
-            function applyFilter(categoria) {
-                // Actualizar botones activos
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
-                if (activeBtn) activeBtn.classList.add('active');
-
-                // Filtrar tarjetas
-                const cards = document.querySelectorAll('.experience-card');
-                cards.forEach(card => {
-                    if (categoria === 'all') {
+            // Filtrar tarjetas
+            const cards = document.querySelectorAll('.community-card');
+            cards.forEach(card => {
+                if (categoria === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(`categoria-${categoria}`)) {
                         card.style.display = 'block';
                     } else {
-                        if (card.classList.contains(`categoria-${categoria}`)) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
+                        card.style.display = 'none';
                     }
-                });
-            }
-
-            // Clic en botones
-            document.querySelectorAll('.filter-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    const categoria = button.getAttribute('data-filter');
-                    const url = new URL(window.location);
-                    if (categoria === 'all') {
-                        url.searchParams.delete('categoria');
-                    } else {
-                        url.searchParams.set('categoria', categoria);
-                    }
-                    window.history.pushState({}, '', url);
-                    applyFilter(categoria);
-                });
+                }
             });
-
-            // Cargar filtro desde URL
-            function initFromURL() {
-                const params = new URLSearchParams(window.location.search);
-                const categoria = params.get('categoria') || 'all';
-                applyFilter(categoria);
-            }
-
-            // Soporte para botones Atrás/Adelante
-            window.addEventListener('popstate', initFromURL);
-
-            // Iniciar
-            document.addEventListener('DOMContentLoaded', initFromURL);
         }
+
+        // Clic en botones
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const categoria = button.getAttribute('data-filter');
+                const url = new URL(window.location);
+                if (categoria === 'all') {
+                    url.searchParams.delete('categoria');
+                } else {
+                    url.searchParams.set('categoria', categoria);
+                }
+                window.history.pushState({}, '', url);
+                applyFilter(categoria);
+            });
+        });
+
+        // Inicializar desde URL
+        function initFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const categoria = params.get('categoria') || 'all';
+            applyFilter(categoria);
+        }
+
+        // Soporte para botones Atrás/Adelante
+        window.addEventListener('popstate', initFromURL);
+
+        // Iniciar
+        document.addEventListener('DOMContentLoaded', initFromURL);
     </script>
 </body>
 

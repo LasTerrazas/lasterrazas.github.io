@@ -16,17 +16,18 @@
             transition: all 0.3s ease;
         }
 
-        .filter-btn {
-            @apply px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50 transition;
-        }
+         .filter-btn {
+        @apply px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200;
+        @apply border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700;
+    }
 
-        .filter-btn.active {
-            @apply bg-green-600 text-white border-transparent;
-        }
+    .filter-btn.active {
+        @apply bg-green-600 text-white border-transparent shadow-md;
+    }
 
-        .hidden-content {
-            display: none;
-        }
+    .hidden-content {
+        display: none;
+    }
     </style>
 </head>
 

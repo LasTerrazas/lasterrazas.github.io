@@ -13,15 +13,28 @@
             transform: translateY(-10px);
             transition: all 0.3s ease;
         }
-         .filter-btn {
-        @apply px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200;
-        @apply border-green-600 text-green-600 hover:bg-green-50 hover:border-green-700;
-    }
-
-    .filter-btn.active {
-        @apply bg-green-600 text-white border-transparent shadow-md;
-    }
-
+       .filter-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .filter-btn:not(.active) {
+        border-width: 2px;
+        border-color: #059669;
+        color: #059669;
+        background-color: white;
+      }
+      .filter-btn:not(.active):hover {
+        background-color: #f0fdf4;
+      }
+      .filter-btn.active {
+        background-color: #059669;
+        color: white;
+        border-color: transparent;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
     .hidden-content {
         display: none;
     }

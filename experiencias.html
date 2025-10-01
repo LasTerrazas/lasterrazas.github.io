@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
             transform: translateY(-10px);
             transition: all 0.3s ease;
         }
-        
+
         .filter-btn {
             @apply px-4 py-2 rounded-full border border-green-600 text-green-600 hover:bg-green-50 transition;
         }
@@ -28,6 +29,7 @@
         }
     </style>
 </head>
+
 <body class="font-sans bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full z-10">
@@ -40,14 +42,21 @@
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
                     <a href="index.html" class="text-green-600 px-3 py-2 text-sm font-medium">Inicio</a>
-                    <a href="index.html#nosotros" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Nosotros</a>
-                    <a href="index.html#experiencias" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Experiencias</a>
-                    <a href="index.html#comunidad" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Comunidad</a>
-                    <a href="index.html#testimonios" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Testimonios</a>
-                    <a href="index.html#contacto" class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700">Contacto</a>
+                    <a href="index.html#nosotros"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Nosotros</a>
+                    <a href="index.html#experiencias"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Experiencias</a>
+                    <a href="index.html#comunidad"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Comunidad</a>
+                    <a href="index.html#testimonios"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Testimonios</a>
+                    <a href="index.html#contacto"
+                        class="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700">Contacto</a>
                 </div>
                 <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+                        aria-controls="mobile-menu" aria-expanded="false">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
@@ -55,12 +64,18 @@
             <!-- Mobile menu, show/hide based on menu state -->
             <div class="hidden md:hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-green-600 bg-green-50">Inicio</a>
-                    <a href="index.html#nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Nosotros</a>
-                    <a href="index.html#experiencias" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Experiencias</a>
-                    <a href="index.html#comunidad" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Comunidad</a>
-                    <a href="index.html#testimonios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Testimonios</a>
-                    <a href="index.html#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-600 hover:bg-green-700">Contacto</a>
+                    <a href="index.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-green-600 bg-green-50">Inicio</a>
+                    <a href="index.html#nosotros"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Nosotros</a>
+                    <a href="index.html#experiencias"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Experiencias</a>
+                    <a href="index.html#comunidad"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Comunidad</a>
+                    <a href="index.html#testimonios"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-600 hover:bg-green-50">Testimonios</a>
+                    <a href="index.html#contacto"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-600 hover:bg-green-700">Contacto</a>
                 </div>
             </div>
         </div>
@@ -91,188 +106,245 @@
 
             <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" id="experiences-container">
                 <!-- Experience 1 - Senderismo -->
-                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/Senderismo.jpeg" alt="Senderismo">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
                             <span class="ml-2 text-gray-500 text-sm">2.5 km - 3 horas</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Observacion de Aves</h3>
                         <p class="mt-3 text-base text-gray-500">
-                           Diseñado para todo el visitante interesado en conocer la avifauna que habita los bosques de Las Terrazas, en
-                           pleno corazón de la Sierra del Rosario, donde se pueden observar el Tocororo ave nacional de vistosos colores.
+                            Diseñado para todo el visitante interesado en conocer la avifauna que habita los bosques de
+                            Las Terrazas, en
+                            pleno corazón de la Sierra del Rosario, donde se pueden observar el Tocororo ave nacional de
+                            vistosos colores.
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                         <div class="more-content hidden mt-4 text-gray-500 transition-all duration-300 ease-in-out">
-                            <p>cinco especies de carpinteros, la Carta Cuba, que por su tamaño es casi imperceptible, así como el sinsonte que
-                               nos deleitará con su bello canto durante todo el recorrido.
+                            <p>cinco especies de carpinteros, la Carta Cuba, que por su tamaño es casi imperceptible,
+                                así como el sinsonte que
+                                nos deleitará con su bello canto durante todo el recorrido.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                
+
                 <!-- Experience 2 - Senderismo -->
-                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/Senderismo.jpeg" alt="Senderismo">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
                             <span class="ml-2 text-gray-500 text-sm">6.4 km - 3 horas</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Sendero La Serafina</h3>
                         <p class="mt-3 text-base text-gray-500">
-                           Andar por senderos en medio de bosques siempre verdes en un recorrido de más de 6000 metros, disfrutando una amplia biodiversidad de vegetación,
-                           flora y fauna. En el trayecto subir a un excelente mirador donde se observa la pintoresca comunidad Las Terrazas. 
+                            Andar por senderos en medio de bosques siempre verdes en un recorrido de más de 6000 metros,
+                            disfrutando una amplia biodiversidad de vegetación,
+                            flora y fauna. En el trayecto subir a un excelente mirador donde se observa la pintoresca
+                            comunidad Las Terrazas.
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                         <div class="more-content hidden mt-4 text-gray-500 transition-all duration-300 ease-in-out">
-                            <p>Finalmente llegar a las ruinas del cafetal Santa Serafina exponente de la presencia de colonos franceses en la Sierra del Rosario.
-                               Terminada la visita se desciende por el valle del río San Juan hasta llegar a Rancho Curujey.
+                            <p>Finalmente llegar a las ruinas del cafetal Santa Serafina exponente de la presencia de
+                                colonos franceses en la Sierra del Rosario.
+                                Terminada la visita se desciende por el valle del río San Juan hasta llegar a Rancho
+                                Curujey.
                             </p>
                         </div>
                     </div>
                 </div>
                 <!-- Experience 3 - Senderismo -->
-                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/Senderismo.jpeg" alt="Senderismo">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
                             <span class="ml-2 text-gray-500 text-sm">3 km - 2 horas</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Sendero Las Delicias</h3>
                         <p class="mt-3 text-base text-gray-500">
-                           Recorrido de 3000 metros que serpentea la loma de Las Delicias hasta llegar al mirador del Valle del San Juan. Desde
-                           ese sitio, a 330 metros sobre el nivel medio del mar, se puede observar la pintoresca comunidad Las Terrazas mientras se disfruta de un picnic amenizado por el canto de las aves. 
+                            Recorrido de 3000 metros que serpentea la loma de Las Delicias hasta llegar al mirador del
+                            Valle del San Juan. Desde
+                            ese sitio, a 330 metros sobre el nivel medio del mar, se puede observar la pintoresca
+                            comunidad Las Terrazas mientras se disfruta de un picnic amenizado por el canto de las aves.
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                         <div class="more-content hidden mt-4 text-gray-500 transition-all duration-300 ease-in-out">
-                            <p>Finalmente se desciende 1.500 metros hasta llegar al cafetal Buenavista para conocer su historia así como el desarrollo cafetalero que hubo en la región en la primera mitad del siglo XIX.</p>
+                            <p>Finalmente se desciende 1.500 metros hasta llegar al cafetal Buenavista para conocer su
+                                historia así como el desarrollo cafetalero que hubo en la región en la primera mitad del
+                                siglo XIX.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Experience 4 - Senderismo -->
-                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-senderismo bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/Senderismo.jpeg" alt="Senderismo">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Naturaleza</span>
                             <span class="ml-2 text-gray-500 text-sm">9 km - 3 horas</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Sendero El Contento</h3>
                         <p class="mt-3 text-base text-gray-500">
-                           Recorrido de 9 km que serpentea la elevación conocida como El Taburete por sus flancos norte, este y sur. En el trayecto visita a las ruinas de los cafetales San Ildefonso y El Contento, plantaciones existentes en la primera mitad del siglo XIX en la Sierra del Rosario. 
+                            Recorrido de 9 km que serpentea la elevación conocida como El Taburete por sus flancos
+                            norte, este y sur. En el trayecto visita a las ruinas de los cafetales San Ildefonso y El
+                            Contento, plantaciones existentes en la primera mitad del siglo XIX en la Sierra del
+                            Rosario.
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                         <div class="more-content hidden mt-4 text-gray-500 transition-all duration-300 ease-in-out">
-                            <p>Su historia podrá ser conocida justo allí dónde ocurrió. Las cristalinas aguas que conforman piscinas naturales a orillas del río San Juan, motivo de alabanza de muchos visitantes, complementan la excursión.</p>
+                            <p>Su historia podrá ser conocida justo allí dónde ocurrió. Las cristalinas aguas que
+                                conforman piscinas naturales a orillas del río San Juan, motivo de alabanza de muchos
+                                visitantes, complementan la excursión.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Experience 5 - Gastronomía -->
-                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/buenavista.jpg" alt="Restaurantes">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
                             <span class="ml-2 text-gray-500 text-sm">Especialidad: Comida Cubana</span>
                             <span class="ml-2 text-gray-500 text-sm">De 9:00 am a 5:00 pm</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Cafetal Buenavista</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Situado en una de las elevaciones más notables de la Sierra del Rosario,nombrada "Las Peladas" a unos 240 metros sobre el nivel de mar,
+                            Situado en una de las elevaciones más notables de la Sierra del Rosario,nombrada "Las
+                            Peladas" a unos 240 metros sobre el nivel de mar,
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                         <div class="more-content hidden mt-4 text-gray-500 transition-all duration-300 ease-in-out">
-                            <p> encontramos el Cafetal Buenavista, reliquia histórica fomentado a principios del Siglo XIX por inmigrantes franceses
-                        </p></p>
+                            <p> encontramos el Cafetal Buenavista, reliquia histórica fomentado a principios del Siglo
+                                XIX por inmigrantes franceses
+                            </p>
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Experience 6 - Gastronomía -->
-                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/campesino.jpg" alt="Restaurantes">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
                             <span class="ml-2 text-gray-500 text-sm">Especialidad: Comida Tradicional Criolla</span>
                             <span class="ml-2 text-gray-500 text-sm">De 9:00 am a 5:00 pm</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Casa del Campesino</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Permite el rescate y reanimación de las tradiciones del campesino medio cubano, sus hábitos y costumbres, en especial, la forma y disposición de la casa,
+                            Permite el rescate y reanimación de las tradiciones del campesino medio cubano, sus hábitos
+                            y costumbres, en especial, la forma y disposición de la casa,
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                         <div class="more-content hidden mt-4 text-gray-500 transition-all duration-300 ease-in-out">
-                            <p>construida con materiales de origen natural, complementado con el patio lleno de animales domésticos, jardines, frutales sí como, contar de modo exclusivo con la privacidad y la tranquilidad necesaria</p>
+                            <p>construida con materiales de origen natural, complementado con el patio lleno de animales
+                                domésticos, jardines, frutales sí como, contar de modo exclusivo con la privacidad y la
+                                tranquilidad necesaria</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Experience 7 - Gastronomía -->
-                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/casabotes.jpg" alt="Restaurantes">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
                             <span class="ml-2 text-gray-500 text-sm">Especialidad: Pescados y Mariscos</span>
                             <span class="ml-2 text-gray-500 text-sm">De 9:00 am a 5:00 pm</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Casa de Botes</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            En el centro de la Comunidad, a orillas del lago San Juan, en el que además de su exclusividad en ofrecer frutos del mar, combinados con otras variedades gastronómicas, se puede pasear en botes.
+                            En el centro de la Comunidad, a orillas del lago San Juan, en el que además de su
+                            exclusividad en ofrecer frutos del mar, combinados con otras variedades gastronómicas, se
+                            puede pasear en botes.
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Experience 7 - Gastronomía -->
-                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="experience-card categoria-gastronomia bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
                     <img class="w-full h-48 object-cover" src="images/moka-restaurante.jpg" alt="Restaurantes">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Gastronomía</span>
                             <span class="ml-2 text-gray-500 text-sm">Cocina Cubana Moderna Estilizada</span>
-                            <span class="ml-2 text-gray-500 text-sm">De 12:00 pm a 3:00 pm y De 7:00 pm a 10:00 pm</span>
+                            <span class="ml-2 text-gray-500 text-sm">De 12:00 pm a 3:00 pm y De 7:00 pm a 10:00
+                                pm</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">El Balcón de Las Tecas</h3>
                         <p class="mt-3 text-base text-gray-500">
-                           Con su singular arquitectura para deleitarse con la comunidad Las Terrazas, el restaurante "El Balcón de las Tecas” perteneciente al hotel Moka le ofrece al visitante un encuentro con los platos más comunes de a comida internacional así como el rescate del arte culinario local
+                            Con su singular arquitectura para deleitarse con la comunidad Las Terrazas, el restaurante
+                            "El Balcón de las Tecas” perteneciente al hotel Moka le ofrece al visitante un encuentro con
+                            los platos más comunes de a comida internacional así como el rescate del arte culinario
+                            local
                         </p>
                         <div class="mt-4">
-                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más →</a>
+                            <a href="#" class="text-green-600 hover:text-green-800 font-medium toggle-more">Saber más
+                                →</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Experience 3 - Alojamiento -->
-                <div class="experience-card categoria-alojamiento bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
-                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Alojamiento">
+                <div class="experience-card categoria-alojamiento bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
+                    <img class="w-full h-48 object-cover"
+                        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Alojamiento">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Alojamiento</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Alojamiento</span>
                             <span class="ml-2 text-gray-500 text-sm">Noches</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Hotel La Moka</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Hospédate en nuestro emblemático hotel integrado en la naturaleza, con todas las comodidades y vistas espectaculares de la Sierra del Rosario.
+                            Hospédate en nuestro emblemático hotel integrado en la naturaleza, con todas las comodidades
+                            y vistas espectaculares de la Sierra del Rosario.
                         </p>
                         <div class="mt-4">
                             <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
@@ -281,16 +353,21 @@
                 </div>
 
                 <!-- Experience 4 - Aventura -->
-                <div class="experience-card categoria-aventura bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up">
-                    <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Canopy">
+                <div class="experience-card categoria-aventura bg-white rounded-lg overflow-hidden shadow-md"
+                    data-aos="fade-up">
+                    <img class="w-full h-48 object-cover"
+                        src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Canopy">
                     <div class="p-6">
                         <div class="flex items-center">
-                            <span class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Aventura</span>
+                            <span
+                                class="inline-block px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">Aventura</span>
                             <span class="ml-2 text-gray-500 text-sm">2 horas</span>
                         </div>
                         <h3 class="mt-2 text-xl font-semibold text-gray-900">Canopy Tour</h3>
                         <p class="mt-3 text-base text-gray-500">
-                            Deslízate por los árboles en nuestro emocionante circuito de canopy, con plataformas y tirolinas que te permitirán admirar el paisaje desde las alturas.
+                            Deslízate por los árboles en nuestro emocionante circuito de canopy, con plataformas y
+                            tirolinas que te permitirán admirar el paisaje desde las alturas.
                         </p>
                         <div class="mt-4">
                             <a href="#" class="text-green-600 hover:text-green-800 font-medium">Saber más →</a>
@@ -308,10 +385,14 @@
                 <div>
                     <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Experiencias</h3>
                     <ul class="mt-4 space-y-4">
-                        <li><a href="experiencias.html?categoria=senderismo" class="text-base text-gray-400 hover:text-white">Senderismo</a></li>
-                        <li><a href="experiencias.html?categoria=gastronomia" class="text-base text-gray-400 hover:text-white">Gastronomía</a></li>
-                        <li><a href="experiencias.html?categoria=alojamiento" class="text-base text-gray-400 hover:text-white">Alojamiento</a></li>
-                        <li><a href="experiencias.html?categoria=aventura" class="text-base text-gray-400 hover:text-white">Canopy Tour</a></li>
+                        <li><a href="experiencias.html?categoria=senderismo"
+                                class="text-base text-gray-400 hover:text-white">Senderismo</a></li>
+                        <li><a href="experiencias.html?categoria=gastronomia"
+                                class="text-base text-gray-400 hover:text-white">Gastronomía</a></li>
+                        <li><a href="experiencias.html?categoria=alojamiento"
+                                class="text-base text-gray-400 hover:text-white">Alojamiento</a></li>
+                        <li><a href="experiencias.html?categoria=aventura"
+                                class="text-base text-gray-400 hover:text-white">Canopy Tour</a></li>
                     </ul>
                 </div>
                 <div>
@@ -353,7 +434,8 @@
                     <a href="https://twitter.com/LasTerrazasCuba" class="text-gray-400 hover:text-white">
                         <i data-feather="twitter" class="h-6 w-6"></i>
                     </a>
-                    <a href="https://www.youtube.com/channel/UCJjXWSM_c3W2B_oYkOABtsg?view_as=subscriber" class="text-gray-400 hover:text-white">
+                    <a href="https://www.youtube.com/channel/UCJjXWSM_c3W2B_oYkOABtsg?view_as=subscriber"
+                        class="text-gray-400 hover:text-white">
                         <i data-feather="youtube" class="h-6 w-6"></i>
                     </a>
                 </div>
@@ -377,11 +459,11 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', function() {
+        mobileMenuButton.addEventListener('click', function () {
             const expanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !expanded);
             mobileMenu.classList.toggle('hidden');
-            
+
             // Change icon between menu and x
             const icon = this.querySelector('i');
             if (expanded) {
@@ -393,7 +475,7 @@
         });
 
         // Toggle more content functionality
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (e.target.classList.contains('toggle-more')) {
                 e.preventDefault();
                 const moreContent = e.target.closest('.experience-card').querySelector('.more-content');
@@ -403,70 +485,72 @@
         });
 
         // Aplicar filtro según URL o botón
-      function applyFilter(categoria) {
-        // Actualizar botones activos
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-          btn.classList.remove('bg-green-600', 'text-white');
-          btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-        });
-
-    const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
-    if (activeBtn) {
-      activeBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-      activeBtn.classList.add('bg-green-600', 'text-white');
-    }
-
-         // === FILTRADO AVANZADO ===
         function applyFilter(categoria) {
             // Actualizar botones activos
             document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
+                btn.classList.remove('bg-green-600', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
             });
-            const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
-            if (activeBtn) activeBtn.classList.add('active');
 
-            // Filtrar tarjetas
-            const cards = document.querySelectorAll('.experience-card');
-            cards.forEach(card => {
-                if (categoria === 'all') {
-                    card.style.display = 'block';
-                } else {
-                    if (card.classList.contains(`categoria-${categoria}`)) {
+            const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+                activeBtn.classList.add('bg-green-600', 'text-white');
+            }
+
+            // === FILTRADO AVANZADO ===
+            function applyFilter(categoria) {
+                // Actualizar botones activos
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
+                if (activeBtn) activeBtn.classList.add('active');
+
+                // Filtrar tarjetas
+                const cards = document.querySelectorAll('.experience-card');
+                cards.forEach(card => {
+                    if (categoria === 'all') {
                         card.style.display = 'block';
                     } else {
-                        card.style.display = 'none';
+                        if (card.classList.contains(`categoria-${categoria}`)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
 
-        // Clic en botones
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const categoria = button.getAttribute('data-filter');
-                const url = new URL(window.location);
-                if (categoria === 'all') {
-                    url.searchParams.delete('categoria');
-                } else {
-                    url.searchParams.set('categoria', categoria);
-                }
-                window.history.pushState({}, '', url);
+            // Clic en botones
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const categoria = button.getAttribute('data-filter');
+                    const url = new URL(window.location);
+                    if (categoria === 'all') {
+                        url.searchParams.delete('categoria');
+                    } else {
+                        url.searchParams.set('categoria', categoria);
+                    }
+                    window.history.pushState({}, '', url);
+                    applyFilter(categoria);
+                });
+            });
+
+            // Cargar filtro desde URL
+            function initFromURL() {
+                const params = new URLSearchParams(window.location.search);
+                const categoria = params.get('categoria') || 'all';
                 applyFilter(categoria);
-            });
-        });
+            }
 
-        // Cargar filtro desde URL
-        function initFromURL() {
-            const params = new URLSearchParams(window.location.search);
-            const categoria = params.get('categoria') || 'all';
-            applyFilter(categoria);
+            // Soporte para botones Atrás/Adelante
+            window.addEventListener('popstate', initFromURL);
+
+            // Iniciar
+            document.addEventListener('DOMContentLoaded', initFromURL);
         }
-
-        // Soporte para botones Atrás/Adelante
-        window.addEventListener('popstate', initFromURL);
-
-        // Iniciar
-        document.addEventListener('DOMContentLoaded', initFromURL);
     </script>
 </body>
+
 </html>

@@ -403,12 +403,12 @@
         });
 
         // Aplicar filtro según URL o botón
-  function applyFilter(categoria) {
-    // Actualizar botones activos
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.classList.remove('bg-green-600', 'text-white');
-      btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
-    });
+      function applyFilter(categoria) {
+        // Actualizar botones activos
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('bg-green-600', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-300');
+        });
 
     const activeBtn = document.querySelector(`.filter-btn[data-filter="${categoria}"]`);
     if (activeBtn) {
